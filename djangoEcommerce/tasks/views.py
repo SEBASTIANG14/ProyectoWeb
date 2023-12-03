@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.http import HttpResponse
 from django.db import IntegrityError
+from tasks.carrito import Carrito
+from tasks.models import Producto
 from . forms import usuarioForm
 
 # Create your views here.
@@ -39,7 +41,8 @@ def signup(request):
 
 
 def inicio(request):
-    return render(request, 'inicio.html')
+    productos = Producto.objects.all()
+    return render(request, 'inicio.html', {'productos': productos})
 
 
 
@@ -75,6 +78,31 @@ def signin(request):
 
         return render(request, 'inicioSesion.html')
     
+
+def agregar_producto(request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.agregar(producto)
+    return redirect("tasks:inicio")
+
+def eliminar_producto(request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.eliminar(producto)
+    return redirect("tasks:inicio")
+
+def restar_producto(request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.restar(producto)
+    return redirect("tasks:inicio")
+
+def limpiar_carrito(request):
+    carrito = Carrito(request)
+    carrito.limpiar()
+    return redirect("tasks:inicio")
+    
+
 def carrito(request):
     return render(request, "") 
     
