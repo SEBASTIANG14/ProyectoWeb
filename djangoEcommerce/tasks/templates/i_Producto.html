@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pagina Producto</title>
+	<link rel="stylesheet" href="info_Producto.css" />
+</head>
+
+<body>
+	
+		<div id="Superior">
+			<button id="logo"></button>
+			<button id="ubi"></button>
+			<input type="text" name="Buscar" id="Buscar" placeholder="Buscar"><button id="lupa"></button></input>
+
+			<button id="maleU"></button>
+
+			<button id="camp"></button>
+
+			<button id="carrito"></button>
+		</div>
+	
+
+	<div class="container-title">COGNAC REMY MARTIN X.O. 700ML</div>
+
+	<main>
+		<div class="container-img">
+			<img src="https://bodegasalianza.vteximg.com.br/arquivos/ids/180341-800-800/0305-1.jpg?v=637560093458000000"
+			 	class="imagen-producto"
+				alt="imagen-producto" />
+		</div>
+		<div class="container-info-product">
+			<div class="container-price">
+				<span>$5,046.00</span>
+				<i class="fa-solid fa-angle-right"></i>
+			</div>
+			
+			<div class="container-add-com">
+				<label for="cantidad">Cantidad:</label>
+				<div class="container-quantity">
+					<div class="btn-increment-decrement">
+						<i class="fa-solid fa-chevron-up" id="increment"></i>
+						<i class="fa-solid fa-chevron-down" id="decrement"></i>
+					</div>
+					<input type="number" id="cantidad" placeholder="1" value="1" min="1" class="input-quantity" required/>
+				</div>
+
+				<!-- <input type="number" id="cantidad" name="cantidad" required> -->
+
+				<button class="btn-add-to-cart">
+					<i class="fa-solid "></i>
+					Comprar
+				</button>
+
+				<button class="btn-add-to-cart">
+					<i class="fa-solid fa-plus"></i>
+					Añadir al carrito
+				</button>
+
+			</div>
+
+			<div class="container-description">
+				<div class="title-description">
+					<h4>Descripción</h4>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="text-description">
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing
+						elit. Laboriosam iure provident atque voluptatibus
+						reiciendis quae rerum, maxime placeat enim cupiditate
+						voluptatum, temporibus quis iusto. Enim eum qui delectus
+						deleniti similique? Lorem, ipsum dolor sit amet
+						consectetur adipisicing elit. Sint autem magni earum est
+						dolorem saepe perferendis repellat ipsam laudantium cum
+						assumenda quidem quam, vero similique? Iusto officiis
+						quod blanditiis iste?
+					</p>
+				</div>
+			</div>
+
+			<div class="container-additional-information">
+				<div class="title-additional-information">
+					<h4>Información adicional</h4>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="text-additional-information hidden">
+					<p>-----------</p>
+				</div>
+			</div>
+
+			<div class="container-reviews">
+				<div class="title-reviews">
+					<h4>Reseñas</h4>
+					<i class="fa-solid fa-chevron-down"></i>
+				</div>
+				<div class="text-reviews hidden">
+					<p>-----------</p>
+				</div>
+			</div>
+
+
+		</div>
+	</main>
+
+	<section class="container-related-products" class="grid">
+		<h2>Productos Relacionados</h2>
+		<div class="card-list-products">
+			<div class="card">
+				<div class="card-img">
+					<img src="https://bodegasalianza.vteximg.com.br/arquivos/ids/198195-398-512/38640-1.png?v=638291195756600000"
+					
+						alt="producto-1" />
+				</div>
+				<div class="info-card">
+					<div class="text-product">
+						<h3>VODKA ABSOLUT AZUL 750 ML C/VASO AZUL</h3>
+						<p class="category">Si</p>
+					</div>
+					<div class="price">$335.00</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-img">
+					<img src="https://bodegasalianza.vteximg.com.br/arquivos/ids/198199-800-800/38644-1.png?v=638291201270730000"
+					
+					alt="producto-2" />
+				</div>
+				<div class="info-card">
+					<div class="text-product">
+						<h3>WHISKEY JAMESON IRISH 750 ML C/VASO VERDE</h3>
+						<p class="category">ei</p>
+					</div>
+					<div class="price">$455.00</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-img">
+					<img src="https://bodegasalianza.vteximg.com.br/arquivos/ids/198200-800-800/38645-1.png?v=638291203077270000"
+					
+					alt="producto-3" />
+				</div>
+				<div class="info-card">
+					<div class="text-product">
+						<h3>TEQUILA ALTOS INFUSIONADO CAFÉ 700 ML /SET TEQUILERO </h3>
+						<p class="category">aa</p>
+					</div>
+					<div class="price">$705.00</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-img">
+					<img src="https://bodegasalianza.vteximg.com.br/arquivos/ids/198191-800-800/38492-1.png?v=638290326321800000"
+					
+					alt="producto-4" />
+				</div>
+				<div class="info-card">
+					<div class="text-product">
+						<h3 href="i_Producto2.html" >TEQUILA ALTOS INFUSIONADO CÍTRICOS 700 ML</h3>
+						<p class="category">Footwear, Sneakers</p>
+					</div>
+					<div class="price">$250.00</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<footer>
+		<p>
+			
+		</p>
+	</footer>
+
+	<script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+	<script src="info_Producto.js"></script>
+	<script src="carrito.js"></script>
+</body>
+
+</html>

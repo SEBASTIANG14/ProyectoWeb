@@ -1,0 +1,475 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+@media screen and (min-width:1024px){
+    div#Superior{
+        width: 100%;
+        height: 13vh;
+        background-color: rgb(57, 184, 255);
+        display: flex;
+        align-items: center;
+    }
+    
+    button#logo{
+        width: 28vh;
+        height: 4.5vh;
+        margin-left: 10vh;
+        background-image: url(ImgLogo.png);
+        background-size: 100%;
+        border: none;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    
+    button#ubi{
+        width: 5vh;
+        height: 5vh;
+        margin-left: 10vh;
+        background-image: url(Location.png);
+        background-position: center;
+        background-size: cover;
+        border: none;
+        background-repeat: no-repeat;
+        background-color: rgb(57, 184, 255);
+        cursor: pointer;
+    }
+    
+    input#Buscar{
+        width: 70vh;
+        height: 4vh;
+        margin-left: 7vh;
+        border: 3px solid black;
+        padding-left: 10px;
+        font-size: 19px;
+    }
+    
+    button#lupa{
+        width: 4vh;
+        height: 4.7vh;
+        border: 3px solid black;
+        background-image: url(Search.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: rgb(142, 189, 247);
+        background-position: center;
+        cursor: pointer;
+    }
+    
+    button#maleU{
+        width: 5vh;
+        height: 5vh;
+        margin-left: 10vh;
+        background-image: url(Male_User.png);
+        background-size: cover;
+        border: none;
+        background-repeat: no-repeat;
+        background-color: rgb(57, 184, 255);
+        background-position: center;
+        cursor: pointer;
+    }
+    
+    button#camp{
+        width: 5vh;
+        height: 5vh;
+        margin-left: 10vh;
+        background-image: url(campana.png);
+        background-size: cover;
+        border: none;
+        background-repeat: no-repeat;
+        background-color: rgb(57, 184, 255);
+        background-position: center;
+        cursor: pointer;
+    }
+    
+    button#carrito{
+        width: 6vh;
+        height: 6vh;
+        margin-left: 10vh;
+        background-image: url(carritoCompra.png);
+        background-size: cover;
+        border: none;
+        background-repeat: no-repeat;
+        background-color: rgb(57, 184, 255);
+        background-position: center;
+        cursor: pointer;
+    }
+    .producto1{
+        display: flex;
+        justify-content: space-between;
+        background-color: lightgray;
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 50px;
+        height: 350px;
+    }
+    img#creatina{
+        padding: 40px 40px;
+        width: 180px;
+        height: 300px;
+    }
+    .titulo1{
+        margin-top: 4vh;
+        font-size: 3vh;
+    }
+    .abajo1{
+        display: flex;
+        margin-top: 8vh;
+        margin-left: 16vh;
+        gap: 80px;
+        font-size: 3vh;
+    }
+    .precio1{
+       padding: 4vh 4vh;
+    }
+    .descuento1{
+        margin-top: 6vh;
+        font-size: 2vh;
+        color: gray;
+    }
+    .precioCreatina{
+        font-size: 5vh;
+        margin-top: 1vh;
+    }
+    .producto2{
+        display: flex;
+        justify-content: space-between;
+        background-color: lightgray;
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 50px;
+        height: 350px;
+    }
+    img#proteina{
+        padding: 40px 40px;
+        width: 200px;
+        height: 300px;
+    }
+    .titulo2{
+        margin-top: 4vh;
+        font-size: 3vh;
+    }
+    .abajo2{
+        display: flex;
+        margin-top: 8vh;
+        margin-left: 16vh;
+        gap: 80px;
+        font-size: 3vh;
+    }
+    .precioProteina{
+        font-size: 5vh;
+        margin-top: 9vh;
+        margin-right: 2vh;
+    }
+    select{
+        width: 8vh;
+        font-size: 3vh;
+    }
+    .producto3{
+        display: flex;
+        justify-content: space-between;
+        background-color: lightgray;
+        margin-left: 150px;
+        margin-right: 150px;
+        margin-top: 50px;
+        height: 350px;
+    }
+    img#xbox{
+        padding: 40px 40px;
+        width: 300px;
+        height: 300px;
+    }
+    .titulo3{
+        margin-top: 4vh;
+        font-size: 3vh;
+    }
+    .abajo3{
+        display: flex;
+        margin-top: 8vh;
+        margin-left: 1vh;
+        gap: 80px;
+        font-size: 3vh;
+    }
+    .precio3{
+        padding: 4vh 4vh;
+     }
+     .descuento3{
+         margin-top: 6vh;
+         font-size: 2vh;
+         color: gray;
+     }
+     .precioXbox{
+         font-size: 5vh;
+         margin-top: 1vh;
+     }
+     .subtotal{
+        text-align: center;
+        margin-top: 3vh;
+        font-size: 3vh;
+     }
+     .comprarYa{
+        align-items: center;
+        text-align: center;
+     }
+     button#compra{
+        background-color: #0064B1;
+        color: white;
+        font-size: 3vh;
+        margin-top: 3vh;
+        border-radius: 17px;
+        width: 46vh;
+        height: 4vh;
+     }
+
+     br#br{
+        display: none;
+     }
+}
+
+@media screen and (max-width:767px){
+    div#Superior{
+        width: 100%;
+        height: 13vh;
+        background-color: rgb(57, 184, 255);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    button#logo{
+        width: 4vh;
+        height: 4vh;
+        margin-left: 2%;
+        background: transparent;
+        background-image: url(imglogomini.png);
+        background-size: 100%;
+        border: none;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
+    
+    button#ubi{
+        width: 4vh;
+        height: 4vh;
+        margin-left: 2%;
+        background-image: url(Location.png);
+        background-position: center;
+        background-size: 100%;
+        border: none;
+        background-repeat: no-repeat;
+        background-color: rgb(57, 184, 255);
+        cursor: pointer;
+    }
+    
+    input#Buscar{
+        width: 20%;
+        height: 3vh;
+        margin-left: 2%;
+        border: 3px solid black;
+        padding-left: 10px;
+        font-size: 19px;
+    }
+    
+    button#lupa{
+        width: 3.7vh;
+        height: 3.8vh;
+        border: 3px solid black;
+        background-image: url(Search.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: rgb(142, 189, 247);
+        background-position: center;
+        cursor: pointer;
+    }
+    
+    button#maleU{
+        width: 5vh;
+        height: 5vh;
+        margin-left: 2%;
+        background-image: url(Male_User.png);
+        background-size: 100%;
+        border: none;
+        background-repeat: no-repeat;
+        background-color: rgb(57, 184, 255);
+        background-position: center;
+        cursor: pointer;
+    }
+    
+    button#camp{
+        width: 5vh;
+        height: 5vh;
+        margin-left: 2%;
+        background-image: url(campana.png);
+        background-size: 100%;
+        border: none;
+        background-repeat: no-repeat;
+        background-color: rgb(57, 184, 255);
+        background-position: center;
+        cursor: pointer;
+    }
+    
+    button#carrito{
+        width: 6vh;
+        height: 6vh;
+        margin-left: 2%;
+        background-image: url(carritoCompra.png);
+        background-size: 100%;
+        border: none;
+        background-repeat: no-repeat;
+        background-color: rgb(57, 184, 255);
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .producto1{
+        display: flex;
+        justify-content: space-between;
+        background-color: lightgray;
+        margin-top: 20px;
+        width: 100%;
+        height: 150px;
+    }
+    img#creatina{
+        width: 70px;
+        height: 100px;
+        margin-top: 3.5vh;
+        margin-left: 2vh;
+        background-repeat: no-repeat;
+    }
+    .titulo1{
+        margin-top: 2vh;
+        font-size: 10px;
+        margin-left: 2vh;
+    }
+    .abajo1{
+        display: flex;
+        margin-top: 3vh;
+        margin-left: 1vh;
+        gap: 20px;
+        font-size: 10px;
+    }
+    .precio1{
+        padding: 4vh 4vh;
+        position: absolute;
+        left: 10vh;
+        top: 25vh;
+     }
+ 
+     p#p1{
+         font-size: 20px;
+     }
+     .descuento1{
+         margin-top: 6vh;
+         font-size: 2vh;
+         color: gray;
+         position: absolute;
+         left: 13vh;
+         top: -1.5vh;
+     }
+    .producto2{
+        display: flex;
+        justify-content: space-between;
+        background-color: lightgray;
+        margin-top: 50px;
+        width: 100%;
+        height: 150px;
+    }
+    img#proteina{
+        width: 70px;
+        height: 100px;
+        margin-top: 3.5vh;
+        margin-left: 2vh;
+        background-repeat: no-repeat;
+    }
+    .titulo2{
+        margin-top: 2vh;
+        font-size: 10px;
+        margin-left: 2vh;
+    }
+    .abajo2{
+        display: flex;
+        margin-top: 3vh;
+        margin-left: 1vh;
+        gap: 20px;
+        font-size: 10px;
+    }
+    .precio2{
+        padding: 4vh 4vh;
+        position: absolute;
+        left: 10vh;
+        top: 48vh;
+     }
+ 
+     p#p2{
+         font-size: 20px;
+     }
+    select{
+        width: 4vh;
+        height: 2vh;
+        font-size: 2vh;
+    }
+    .producto3{
+        display: flex;
+        justify-content: space-between;
+        background-color: lightgray;
+        margin-top: 50px;
+        width: 100%;
+        height: 150px;
+    }
+    img#xbox{
+        width: 70px;
+        height: 100px;
+        margin-top: 3.5vh;
+        margin-left: 2vh;
+        background-repeat: no-repeat;
+    }
+    .titulo3{
+        margin-top: 2vh;
+        font-size: 10px;
+        margin-left: 2vh;
+    }
+    .abajo3{
+        display: flex;
+        margin-top: 3vh;
+        margin-left: 1vh;
+        gap: 20px;
+        font-size: 10px;
+    }
+    .precio3{
+        padding: 4vh 4vh;
+        position: absolute;
+        left: 10vh;
+        top: 69vh;
+     }
+ 
+     p#p3{
+         font-size: 20px;
+     }
+     .descuento3{
+         margin-top: 6vh;
+         font-size: 2vh;
+         color: gray;
+         position: absolute;
+         left: 11vh;
+         top: -1.5vh;
+     }
+     .subtotal{
+        text-align: center;
+        margin-top: 3vh;
+        font-size: 2vh;
+     }
+     .comprarYa{
+        align-items: center;
+        text-align: center;
+     }
+     button#compra{
+        background-color: #0064B1;
+        color: white;
+        font-size: 3vh;
+        margin-top: 3vh;
+        border-radius: 17px;
+        width: 30vh;
+        height: 4vh;
+     }
+}

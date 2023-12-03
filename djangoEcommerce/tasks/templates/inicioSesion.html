@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inico de sesión</title>
+    <link rel="stylesheet" href="Inicio_sesion.css"/>
+</head>
+<body>
+    <div id="Superior">
+
+        <a href="index.html">
+            <button id="logo"></button>
+        </a>
+
+        <button id="ubi"></button>
+        
+        <input type="text" name="Buscar" id="Buscar" placeholder="Buscar" >
+            <a href="Busqueda.html">
+                <button id="lupa"></button>
+            </a>
+        </input>
+
+        <a href="inicioSesion.html">
+            <button id="maleU"></button>
+        </a>
+
+        <button id="camp"></button>
+
+        <a href="Carrito.html">
+            <button id="carrito"></button>
+        </a>
+    </div>
+    {{error}}
+<form action="/inicioSesion/" method="POST">
+    {% csrf_token %}
+    <div id="Formulario">
+        <button id="regreso"></button>
+
+        <h1 id="titulo">Inicio de sesión</h1>
+
+        <h3 id="correo">Correo electrónico</h3>
+        <input type="text" name="Correo" id="correo" placeholder="Escribe tu correo electrónico">
+
+        <h3 id="contra">Contraseña</h3>
+        <input type="password" name="Contraseña" id="contra" placeholder="Escribe tu contraseña">
+
+        <br>
+        <a id="hoc" href="#">¿Has olvidado tu contraseña?</a>
+
+        <br>
+        <input type="checkbox" name="recuerdame" id="recuerdame">
+        <label id="recuerdame" for="recuerdame">Recuérdame</label>
+
+        <br>
+        <button id="sesion">Iniciar sesión</button>
+
+        <br>
+        <h5 id="regis">¿No tienes cuenta? <a id="linkRegis" href="registro.html">Registrate aquí!</a></h5>
+        <script src="inicioSesion.js"></script>
+    </div>
+</body>
+</html>

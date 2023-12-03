@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro</title>
+        <link rel="stylesheet" href="{% static 'styles/Regis.css' %}"/>
+    </head>
+    <body>
+        <div id="Superior">
+            <a href="index.html">
+            <button id="logo"></button>
+        </a>
+        
+        <button id="ubi"></button>
+        
+        <input type="text" name="Buscar" id="Buscar" placeholder="Buscar" >
+            <a href="Busqueda.html">
+                <button id="lupa"></button>
+            </a>
+        </input>
+
+        <a href="inicioSesion.html">
+            <button id="maleU"></button>
+        </a>
+
+        <button id="camp"></button>
+
+        <a href="Carrito.html">
+            <button id="carrito"></button>
+        </a>
+        
+    </div>
+<form method="POST">
+    {% csrf_token %}
+    <div id="Formulario">
+        {{error}}
+        <button id="regreso"></button>
+
+        <h1 id="titulo">Registro</h1>
+
+        <h3 id="nombre">Nombre</h3>
+        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required>
+
+        <h3 id="apellido">Apellido</h3>
+        <input type="text" name="apellido" id="apellido" placeholder="Escribe tu apellido" required>
+
+        <h3 id="correo">Correo electrónico</h3>
+        <input type="text" name="correo" id="correo" placeholder="Escribe tu correo electrónico" required>
+
+        <h3 id="contra">Contraseña</h3>
+        <input type="password" name="contraseña" id="contra" placeholder="Escribe tu contraseña"required>
+
+        <h3 id="contra2">Confirmar contraseña</h3>
+        <input type="password" name="contraseña2" id="contra2" placeholder="Vuelve a escribe tu contraseña"required>
+
+        <h3 id="num">Numero de telefono</h3>
+        <input type="text" name="telefono" id="num" placeholder="Escribe tu telefono"required>
+
+        <h3 id="direccion">Direccion de envio</h3>
+        <input type="text" name="direccion" id="direccion" placeholder="Escribe tu direccion"required>
+
+        <br>
+        <button id="guardar">GUARDAR</in>
+        <button id="cancelar">CANCELAR</button>
+
+        <br>
+        <h5 id="regis">¿Tienes cuenta? <a id="linkRegis" href="inicioSesion.html">Inicia sesión aquí!</a></h5>
+    </div>
+</form>
+        <script src="registro.js"></script>
+</body>
+</html>

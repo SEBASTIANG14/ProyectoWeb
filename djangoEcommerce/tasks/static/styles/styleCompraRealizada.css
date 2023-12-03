@@ -1,0 +1,247 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+@media screen and (min-width: 1024px) {
+    div#Superior {
+      width: 100%;
+      height: 13vh;
+      background-color: rgb(57, 184, 255);
+      display: flex;
+      align-items: center;
+    }
+div#Superior{
+    width: 100%;
+    height: 13vh;
+    background-color: rgb(57, 184, 255);
+    display: flex;
+    align-items: center;
+}
+
+button#logo{
+    width: 28vh;
+    height: 4.5vh;
+    margin-left: 10vh;
+    background-image: url(ImgLogo.png);
+    background-size: 100%;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+button#ubi{
+    width: 5vh;
+    height: 5vh;
+    margin-left: 10vh;
+    background-image: url(Location.png);
+    background-position: center;
+    background-size: cover;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: rgb(57, 184, 255);
+    cursor: pointer;
+}
+
+input#Buscar{
+    width: 70vh;
+    height: 4vh;
+    margin-left: 7vh;
+    border: 3px solid black;
+    padding-left: 10px;
+    font-size: 19px;
+}
+
+button#lupa{
+    width: 4vh;
+    height: 4.7vh;
+    border: 3px solid black;
+    background-image: url(Search.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(142, 189, 247);
+    background-position: center;
+    cursor: pointer;
+}
+
+button#maleU{
+    width: 5vh;
+    height: 5vh;
+    margin-left: 10vh;
+    background-image: url(Male_User.png);
+    background-size: cover;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: rgb(57, 184, 255);
+    background-position: center;
+    cursor: pointer;
+}
+
+button#camp{
+    width: 5vh;
+    height: 5vh;
+    margin-left: 10vh;
+    background-image: url(campana.png);
+    background-size: cover;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: rgb(57, 184, 255);
+    background-position: center;
+    cursor: pointer;
+}
+
+button#carrito{
+    width: 6vh;
+    height: 6vh;
+    margin-left: 10vh;
+    background-image: url(carritoCompra.png);
+    background-size: cover;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: rgb(57, 184, 255);
+    background-position: center;
+    cursor: pointer;
+}
+.contenedor{
+    padding: 100px 100px;
+    margin: 100px 200px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+}
+.factura{
+    font-size: 3vh;
+}
+button{
+    background-color: #39B8FF;
+    color: white;
+    font-size: 3vh;
+    margin-top: 3vh;
+    border-radius: 10px;
+    width: 40vh;
+    height: 8vh;
+ }
+
+}
+@media screen and (max-width: 767px) {
+    div#Superior {
+      width: 100%;
+      height: 13vh;
+      background-color: rgb(57, 184, 255);
+      display: flex;
+      align-items: center;
+    }
+div#Superior{
+    width: 100%;
+    height: 13vh;
+    background-color: rgb(57, 184, 255);
+    display: flex;
+    align-items: center;
+}
+
+button#logo{
+    width: 10vh;
+    height: 2vh;
+    margin-left: 2vh;
+    background-image: url(ImgLogo.png);
+    background-size: 100%;
+    border: none;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+button#ubi{
+    width: 2vh;
+    height: 3vh;
+    margin-left: 2vh;
+    background-image: url(Location.png);
+    background-position: center;
+    background-size: cover;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: rgb(57, 184, 255);
+    cursor: pointer;
+}
+
+input#Buscar{
+    width: 10vh;
+    height: 3vh;
+    margin-left: 2vh;
+    border: 3px solid black;
+    padding-left: 10px;
+    font-size: 19px;
+}
+
+button#lupa{
+    width: 4vh;
+    height: 4vh;
+    border: 3px solid black;
+    background-image: url(Search.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(142, 189, 247);
+    background-position: center;
+    cursor: pointer;
+    margin-bottom: 2.6vh;
+}
+
+button#maleU{
+    width: 2vh;
+    height: 3vh;
+    margin-left: 1vh;
+    background-image: url(Male_User.png);
+    background-size: cover;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: rgb(57, 184, 255);
+    background-position: center;
+    cursor: pointer;
+}
+
+button#camp{
+    width: 2vh;
+    height: 3vh;
+    margin-left: 1vh;
+    background-image: url(campana.png);
+    background-size: cover;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: rgb(57, 184, 255);
+    background-position: center;
+    cursor: pointer;
+}
+
+button#carrito{
+    width: 2vh;
+    height: 3vh;
+    margin-left: 1vh;
+    background-image: url(carritoCompra.png);
+    background-size: cover;
+    border: none;
+    background-repeat: no-repeat;
+    background-color: rgb(57, 184, 255);
+    background-position: center;
+    cursor: pointer;
+}
+.contenedor{
+    padding: 50px 50px;
+    margin: 50px 50px 50px 50px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+}
+.factura{
+    font-size: 3vh;
+}
+button{
+    background-color: #39B8FF;
+    color: white;
+    font-size: 3vh;
+    margin-top: 3vh;
+    border-radius: 10px;
+    width: 20vh;
+    height: 8vh;
+ }
+
+}
