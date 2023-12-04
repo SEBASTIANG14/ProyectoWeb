@@ -1,0 +1,7 @@
+
+<link rel="stylesheet" href="../static/styles/create.css" />
+<h1>hola gamer</h1>
+<form action="/create_product/" method="POST" id="form-crear-prod">
+  {{ form.as_p }} {% csrf_token %}
+  <button>Subir producto</button>
+</form>

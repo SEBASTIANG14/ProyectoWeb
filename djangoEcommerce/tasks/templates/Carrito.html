@@ -1,10 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="carr.css">
+    <link rel="stylesheet" href="{% static 'styles/carr.css' %}"/>
 </head>
 <body>
     <div id="Superior">
@@ -19,105 +21,9 @@
         <a href="Carrito.html"><button id="carrito"></button></a>
         
     </div>
-    <div class="producto1">
-        <div class="imagenCreatina">
-            <img id="creatina" src="creatina.jpg">
-        </div>
-        <div class="pCreatina">
-            <div class="titulo1">
-                <h3>Birdman Creatina Monohidratada de Alta <br id="br"> Pureza En Polvo Sin Sabor, Preworkout, <br id="br"> Alto Rendimiento | 90 Servicios | 450g.</h3>
-            </div>
-            <div class="abajo1">
-                <p><a href="">Eliminar</a></p>
-                <p>Cantidad</p>
-                <select name="cantidad" id="cant">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                </select>
-                <p><a href="">Comprar ya este producto</a></p>
-            </div>
-        </div>
-        <div class="precio1">
-            <div class="descuento1">
-                <p id="d1">-50%$890.65</p>
-            </div>
-            <div class="precioCreatina">
-                <p id="p1">$445.32</p>
-            </div>
-        </div> 
-    </div>
-    <div class="producto2">
-        <div class="imagenProteina">
-            <img id="proteina" src="proteina.jpg">
-        </div>
-        <div class="pProteina">
-            <div class="titulo2">
-                <h3>Optimum Nutrition Suplemento alimenticio <br id="br"> Gold Standard 100% Whey Sabor Doble <br id="br"> Chocolate 2 LB</h3>
-            </div>
-            <div class="abajo2">
-                <p><a href="">Eliminar</a></p>
-                <p>Cantidad</p>
-                <select name="cantidad" id="cant">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                </select>
-                <p><a href="">Comprar ya este producto</a></p>
-            </div>
-        </div> 
-        <div class="precio2">
-            <div class="precioProteina">
-                <p id="p2">$1599.00</p>
-            </div>
-        </div> 
-    </div>
-    <div class="producto3">
-        <div class="imagenXbox">
-            <img id="xbox" src="xbox.jpg">
-        </div>
-        <div class="pXbox">
-            <div class="titulo3">
-                <h3>Microsoft Xbox Series X 1TB Standard <br id="br">  color negro</h3>
-            </div>
-            <div class="abajo3">
-                <p><a href="">Eliminar</a></p>
-                <p>Cantidad</p>
-                <select name="cantidad" id="cant">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                </select>
-                <p><a href="">Comprar ya este producto</a></p>
-            </div>
-        </div> 
-        <div class="precio3">
-            <div class="descuento3">
-                <p id="d3">-25%$12,932</p>
-            </div>
-            <div class="precioXbox">
-                <p id="p3">$9,669</p>
-            </div>
-        </div> 
-    </div>
+    {{nombre}}
+    {{categoria}}
+    {{precio}}
     <div class="subtotal">
         <h1>Subtotal (4 productos): $12,558.64</h1>
     </div>

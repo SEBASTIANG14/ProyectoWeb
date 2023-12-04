@@ -1,10 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="busqueda.css">
+    <link rel="stylesheet" href="{% static 'styles/busqueda.css' %}"/>
 </head>
 <body>
     <div id="Superior">
@@ -88,7 +90,7 @@
                 <a href="Confirmacion.html"><button type="button"><img id="btn1" src="btnimg2.png"></button></a>
                 <a href="Carrito.html"><button type="button"><img id="btn1" src="btnimg3.png"></button></a>
             </div>
-
+                
             <div class="producto">
                 <img id="compu1" src="compu4.png">
                 <h2 id = "titupc">Lenovo IdeaPad</h2>

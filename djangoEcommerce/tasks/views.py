@@ -4,9 +4,9 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.http import HttpResponse
 from django.db import IntegrityError
-from tasks.carrito import Carrito
+from tasks.models import Carrito, CarritoProductos
 from tasks.models import Producto
-from . forms import usuarioForm
+from . forms import ProductForm
 
 # Create your views here.
 
@@ -17,44 +17,65 @@ def home(request):
 
 def signup(request):
     if request.method == 'GET':
-        return render(request, 'signup.html', {
+        return render(request, 'registro.html', {
             'form': UserCreationForm
         })
     else:
-        if request.POST['password1'] == request.POST['password2']:
+        if request.POST['contraseña'] == request.POST['contraseña2']:
             try:
                 user = User.objects.create_user(
-                    username=request.POST['username'], password=request.POST['password1'])
+                    first_name=request.POST['nombre'],
+                    last_name=request.POST['apellido'],
+                    username=request.POST['correo'],
+                    email=request.POST['correo'],
+                    password=request.POST['contraseña'],
+                    )
                 user.save()
                 login(request, user)
                 return redirect('inicio')
             except IntegrityError:
-                return render(request, 'signup.html', {
+                return render(request, 'registro.html', {
                     'form': UserCreationForm,
                     "error": 'El usuario ya existe'
                 })
 
-        return render(request, 'signup.html', {
+        return render(request, 'formulario.html', {
             'form': UserCreationForm,
             "error": 'Las contraseñas no coinciden'
         })
 
 
 def inicio(request):
-    productos = Producto.objects.all()
-    return render(request, 'inicio.html', {'productos': productos})
-
-
-
-def formulario(request):
-    print(request.POST)
-    if request.method == 'POST':
-        form = usuarioForm(request.POST)
-        if form.is_valid():
-            form.save()
+    if request.method == "GET":
+        products = Producto.objects.all()
+        return render(request, "inicio.html", {
+            'products': products,
+            'iterator': 5
+        }) 
     else:
-        form = usuarioForm()
-    return render(request, 'registro.html', {'form': form})
+        post_info = request.POST
+        nombre = post_info['Nombre']
+        categoria = post_info['Categoria']
+        precio = post_info['Precio']
+        Id = post_info['id']
+        obtCarrito = getCarrito(request.user)
+        producto = Producto.objects.filter(id = Id).first()
+        allCarrito = CarritoProductos(id_producto=producto, precio = precio, id_carrito = obtCarrito)
+        allCarrito.save()
+        products = Producto.objects.all()
+        return render(request, 'Carrito.html', {'nombre': nombre, 'categoria': categoria, 'precio': precio}) 
+    
+
+
+
+#def formulario(request):
+ #   print(request.POST)
+  #  if request.method == 'POST':
+   ##    if form.is_valid():
+     #       form.save()
+    #else:
+     #   form = usuarioForm()
+    #return render(request, 'registro.html', {'form': form})
 
 
 
@@ -101,8 +122,40 @@ def limpiar_carrito(request):
     carrito = Carrito(request)
     carrito.limpiar()
     return redirect("tasks:inicio")
+
+def getCarrito(id_usuario):
+    carrito = Carrito.objects.filter(id_usuario=id_usuario).first()
+    if carrito is None:
+        newCarrito = Carrito(id_usuario = id_usuario)
+        newCarrito.save()
+        return newCarrito
+    if carrito.isOpen == True:
+        return carrito
+    else:
+        newCarrito = Carrito(id_usuario = id_usuario)
+        newCarrito.save()
+        return newCarrito 
     
 
 def carrito(request):
     return render(request, "") 
     
+def busqueda(request):
+    
+    return render(request, "Busqueda.html")
+
+def create_products(request):
+    if request.method == 'GET':
+        return render (request, 'create_product.html', {
+            'form': ProductForm
+        })
+    else:
+        form = ProductForm(request.POST)
+        if form.is_valid():
+            new_prod = form.save(commit=False)
+            new_prod.user = request.user
+            new_prod.save()
+            return render(request, 'create_product.html',{
+                'form': ProductForm
+            })
+        

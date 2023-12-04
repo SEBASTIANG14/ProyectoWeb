@@ -1,10 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOLENS VOLENS</title>
-    <link rel="stylesheet" href="inicio.css"/>
+    <link rel="stylesheet" href="{% static 'styles/inicio.css' %}"/>
 </head>
 <body>
     <div id="Superior">
@@ -50,5 +52,21 @@
             
         </div>
     </div>
+
+    {% for producto in products %}
+    <form action="/inicio/" method="POST">
+        {% csrf_token %}
+    <input type="text" value="{{producto.id}}" name="id" hidden>
+    <input type="text" value="{{producto.nombre}}" name="Nombre" hidden>
+    <input type="text" value="{{producto.categoria}}" name="Categoria" hidden>
+    <input type="text" value="{{producto.precio}}" name="Precio" hidden>
+    <h1>{{producto.nombre}}</h1>
+    <h1>{{producto.categoria}}</h1>
+    <h1>{{producto.precio}}</h1>
+    <button>Agregar Carrito</button>
+
+    </form>
+    {% endfor %}
+
 </body>
 </html>
