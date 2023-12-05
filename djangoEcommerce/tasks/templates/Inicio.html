@@ -10,26 +10,28 @@
 </head>
 <body>
     <div id="Superior">
-        <button id="logo"></button>
-        <button id="ubi"></button>
-
-        <input type="text" name="Buscar" id="Buscar" placeholder="Buscar" >
-            <a href="Busqueda.html">
-                <button id="lupa"></button>
-            </a>
-        </input>
-
-        <a href="inicioSesion.html">
-            <button id="maleU"></button>
+        <a href="index.html">
+        <button id="logo"><img src="{% static 'recursos/ImgLogo.png' %}" alt=""></button>
+    </a>
+    
+    <button id="ubi"></button>
+    
+    <input type="text" name="Buscar" id="Buscar" placeholder="Buscar" >
+        <a href="Busqueda.html">
+            <button class="material-symbols-outlined"> search </button>
         </a>
+    </input>
 
-        <button id="camp"></button>
+    <a href="inicioSesion.html">
+        <button id="maleU"><img src="{% static 'recursos/Male_User.png' %}" alt=""></button>
+    </a>
 
-        <a href="Carrito.html">
-            <button id="carrito"></button>
-        </a>
+    <button id="camp"><img src="{% static 'recursos/campana.png' %}" alt=""></button>
+
+    <a href="templates/Carrito.html">
+        <button id="carrito"><img src="{% static 'recursos/carritoCompra.png' %}" alt=""></button>
+    </a>
     </div>
-
     <div id="arriba">
         <img id="banner1" src="banner.png">
     </div>

@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
 from django.http import HttpResponse
 from django.db import IntegrityError
-from tasks.models import Carrito, CarritoProductos
+from tasks.models import Carrito, CarritoProductos, PurchasedProducts
 from tasks.models import Producto
 from . forms import ProductForm
 
@@ -63,6 +63,8 @@ def inicio(request):
         allCarrito = CarritoProductos(id_producto=producto, precio = precio, id_carrito = obtCarrito)
         allCarrito.save()
         products = Producto.objects.all()
+        historial = PurchasedProducts(user = request.user, product = producto, quantity = 1, total = precio)
+        historial.save()    
         return render(request, 'Carrito.html', {'nombre': nombre, 'categoria': categoria, 'precio': precio}) 
     
 
@@ -158,4 +160,13 @@ def create_products(request):
             return render(request, 'create_product.html',{
                 'form': ProductForm
             })
+        
+
+def historial(request):
+     if request.method == 'GET':
+        historialProductos = PurchasedProducts.objects.filter(user = request.user)
+        print(historialProductos)
+        return render (request, 'historial.html', {
+            
+        })
         

@@ -20,6 +20,12 @@ class CarritoProductos(models.Model):
     precio = models.IntegerField()
     id_carrito = models.ForeignKey(Carrito, on_delete=models.CASCADE)
 
+class PurchasedProducts(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Producto, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField()
+    total = models.FloatField()
+
  #nombre = models.CharField(max_length=50)
   #  apellido = models.CharField(max_length=100)
    # correo = models.EmailField(max_length=100)

@@ -10,25 +10,37 @@
 </head>
 <body>
     <div id="Superior">
-        <a href="index.html"><button id="logo"></button></a>
-        <a href="conf.html"><button id="ubi"></button></a>
-        <input type="text" name="Buscar" id="Buscar" placeholder="Buscar" ><a href="Busqueda.html"><button id="lupa" ></button></a></input>
+        <a href="index.html">
+        <button id="logo"><img src="{% static 'recursos/ImgLogo.png' %}" alt=""></button>
+    </a>
+    
+    <button id="ubi"></button>
+    
+    <input type="text" name="Buscar" id="Buscar" placeholder="Buscar" >
+        <a href="Busqueda.html">
+            <button class="material-symbols-outlined"> search </button>
+        </a>
+    </input>
 
-        <a href="inicioSesion.html"><button id="maleU"></button></a>
+    <a href="inicioSesion.html">
+        <button id="maleU"><img src="{% static 'recursos/Male_User.png' %}" alt=""></button>
+    </a>
 
-        <button id="camp"></button>
+    <button id="camp"><img src="{% static 'recursos/campana.png' %}" alt=""></button>
 
-        <a href="Carrito.html"><button id="carrito"></button></a>
-        
-    </div>
-    {{nombre}}
-    {{categoria}}
-    {{precio}}
+    <a href="templates/Carrito.html">
+        <button id="carrito"><img src="{% static 'recursos/carritoCompra.png' %}" alt=""></button>
+    </a>
+    
+</div>
+    
     <div class="subtotal">
-        <h1>Subtotal (4 productos): $12,558.64</h1>
+        <h1>{{nombre}}</h1>
+        <h1>{{categoria}}</h1>
+        <h1>Subtotal (1 productos): ${{precio}}</h1>
     </div>
     <div class="comprarYa">
-        <a href="Confirmacion.html"><button type="button" id="compra">Comprar ya!</button></a>
+        <a href="/inicio/"><button type="button" id="compra">Comprar ya!</button></a>
     </div>
 </body>
 </html>
